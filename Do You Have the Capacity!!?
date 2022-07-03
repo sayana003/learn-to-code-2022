@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+float l,b,h,V,W;
+    scanf("%f\n",&l);
+    scanf("%f\n",&b);
+    scanf("%f\n",&h);
+     V=(float)l*l*l;
+    printf("%.3f\n",V);
+     W=(float)l*b*h;
+    printf("%.3f\n",W);
+    return 0;
+}
