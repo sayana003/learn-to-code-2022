@@ -1,0 +1,123 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    float marks,total,i,percentage;
+    for(i=0;i<5;i++)
+        {
+        scanf("%f\n",&total);
+        scanf("%f\n",&marks);
+        percentage=(marks/total)*100;
+    
+        
+   if(percentage <40)
+       {
+        printf("F\n");
+       }
+   else if(percentage <55)
+       {
+         printf("P\n");
+       }
+    else if(percentage <60)
+        {
+        printf("D\n");
+        }
+     else if(percentage <65)
+         {
+        printf("C\n");
+         }
+    else if(percentage <70)
+        {
+        printf("C+\n");
+        }
+     else if(percentage <75)
+         {
+        printf("B\n");
+         }
+     else if(percentage <80)
+         {
+        printf("B+\n");
+         }
+     else if(percentage <85)
+         {
+        printf("A\n");
+         }
+     else if(percentage <90)
+         {
+        printf("A+\n");
+         }
+     else if(percentage >=90)
+         {
+        printf("S\n");
+         }
+            }
+
+    
+
+        
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    float marks,total,i,percentage;
+    for(i=0;i<5;i++)
+        {
+        scanf("%f\n",&total);
+        scanf("%f\n",&marks);
+        percentage=(marks/total)*100;
+    
+        
+   if(percentage <40)
+       {
+        printf("F\n");
+       }
+   else if(percentage <55)
+       {
+         printf("P\n");
+       }
+    else if(percentage <60)
+        {
+        printf("D\n");
+        }
+     else if(percentage <65)
+         {
+        printf("C\n");
+         }
+    else if(percentage <70)
+        {
+        printf("C+\n");
+        }
+     else if(percentage <75)
+         {
+        printf("B\n");
+         }
+     else if(percentage <80)
+         {
+        printf("B+\n");
+         }
+     else if(percentage <85)
+         {
+        printf("A\n");
+         }
+     else if(percentage <90)
+         {
+        printf("A+\n");
+         }
+     else if(percentage >=90)
+         {
+        printf("S\n");
+         }
+            }
+}
+    
+
+        
+
+    
