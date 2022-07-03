@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,i;
+    int sum1=0,sum2=0;
+    float r;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+        {
+        sum1=sum1+(i*(i+1));
+        }
+    printf("%d\n",sum1);
+    for(i=0;i<n;i++)
+        {
+        sum2=sum2+(i+(i+1));
+        }
+    printf("%d\n",sum2);
+    r=sum1/sum2;
+    printf("%.2f\n",r);
+}
