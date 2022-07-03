@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main() {
+float a,b,c,S,M,R;
+    scanf("%f\n",&a);
+    scanf("%f\n",&b);
+    scanf("%f\n",&c);
+    S=(float)a*a+b*b+c*c;
+    M=(float)S/3;
+    R=(float)sqrt(M);
+    printf("%.2f",R);
+    return 0;
+}
