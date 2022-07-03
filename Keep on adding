@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main()
+    {
+    int sum=0;
+    int num;
+    int count=0;
+    do
+        {
+        count++;
+        scanf("%d",&num);
+        sum+=num;
+        if (count>=2 && num!=0)
+            {
+            printf("%d\n",sum);
+            }
+        }
+    while(num!=0);
+    return 0;
+    }
