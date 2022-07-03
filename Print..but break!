@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+
+
+int main() {
+ 
+    printf("Hello\tWorld");
+    printf("\n");
+    printf("Welcome to Learn to code 2022");
+ 
+)
