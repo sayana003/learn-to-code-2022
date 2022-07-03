@@ -23,4 +23,4 @@ int n,factorial,i;
 if(i==((n/2)+1)){
     printf("Not Perfect Square");
 }
-27
+}
