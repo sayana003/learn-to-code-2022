@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    float a,b,c;
+    char operation ;
+    scanf("%f%f%f",&a,&b,&c);
+scanf("%c",&operation);
+    switch (operation)
+        {
+        case'#':
+            c=a+b;
+            printf("%.1f",c);
+            break;
+        case'@':
+            c=b-a;
+            printf("%.1f",c);
+            break;
+        case'&':
+            c=a*b;
+            printf("%.1f",c);
+            break;
+        case'%':
+            if(a==0)
+                printf("Not Defined");
+            else
+            {
+              c=b/a;
+            printf("%.1f",c);
+            }    break;
+         default:
+            printf("Error 5: Input Error");
+       } 
+    return 0;
+}
