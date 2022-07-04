@@ -1,0 +1,145 @@
+#include <stdio.h>
+int main() {
+  int category,options;
+  int tempChoice;
+  int currencyChoice;
+  int massChoice;
+  int inputF; // User inputted Fahreinheit;
+  int inputC; // User inputted Celsius;
+  int inputK;
+  int userinputUSDtoEuro; // User inputted for USD to EURO;
+  int userinputUSDtoJPY; // User inputted for USD to JPY;
+  int userinputUSDtoRMB; // User inputted for USD to RMB;
+  int userinputOunce; // User inputted for Ounce;
+  int userinputGram; // User inputted for Gram;
+  int fahrenheitToCelcius; // variable that stores the converted F->C;
+  int celciusToFahrenheit; // variable that stores the converted C->F;
+  int kelvinToCelcius;//variable that stores the converted K->C;
+  int celciusToKelvin;//variable that stores the converted C->k;                                         
+  float USDtoEURO ; // varaible that stores the converted USD->EURO;
+  float USDtoJPY; // stores the converted USD->JPY;
+  float USDtoRMB; // stores the converted USD->RMB;
+  float ounceToPounds; // stores the converted Ounce->Pounds;
+  float gramsToPounds; // stores the vonerted Grams->Pounds;
+  
+    menu:
+  printf("Welcome to Unit Converter! \n");
+  printf("Here is a list of conversation to choose from: \n");
+  printf("Temperature(1),Currency(2),Mass(3) \n");
+  printf("Please enter the number you want to convert.\n");
+  scanf("%d",&category);
+  
+  switch (category) {
+ 
+  case 1: 
+      tt:
+      printf("Welcome to Temperature Converter! \n");
+      printf("Here is a list of conversations to choose from: \n");
+      printf("Enter 1 for Fahrenheit to Celsius. \n");
+      printf("Enter 2 for Celsius to Fahrenheit. \n");
+      printf("Enter 3 for Kelvin to Celcius.\n");
+      printf("Enter 4 for Celcius to Kelvin\n");
+    scanf("%d",&tempChoice);
+    
+      if(tempChoice == 1){
+          printf("Please enter the Fahrenheit degree: \n");
+          scanf("%d",&inputF);
+          fahrenheitToCelcius =  ((inputF-32) * (5.0/9.0));
+          printf("Celcius: %d",fahrenheitToCelcius);
+      }
+      else if(tempChoice == 2){
+        printf("Please enter the Celcius degree: \n");
+        scanf("%d",&inputC);
+        celciusToFahrenheit = ((9.0/5.0)*inputC + 32);
+        printf("Fahrenheit: %d",celciusToFahrenheit);
+      }
+      else if(tempChoice == 3){
+         printf("Please enter the kelvin value");
+        scanf("%d",& inputK);
+        kelvinToCelcius = inputK-273;
+        printf("Celcius: %d",kelvinToCelcius);
+      }
+      else if(tempChoice == 4){
+        printf("Please enter the Celcius value");
+        scanf("%d",& inputC);
+        celciusToKelvin = inputC+273;
+        printf("Kelvin:%d", celciusToKelvin);
+      }
+      else 
+       { printf("Please enter the correct choice. \n");
+        goto tt;
+      }
+      break;
+  case 2: 
+      cc:
+      printf("Welcome to Currency Converter! \n");
+      printf("Here is a list of conversations to choose from: \n");
+      printf("Enter 1 for USD to Euro. \n");
+      printf("Enter 2 for USD to Japanese euro(JPY). \n");
+      printf("Enter 3 for USD to Chinese yuan(RMB). \n");
+      scanf("%d",&currencyChoice);
+      if(currencyChoice == 1){
+          printf("Please enter the USD amount: \n");
+          scanf("%d",&userinputUSDtoEuro);
+          USDtoEURO = userinputUSDtoEuro * 0.87;
+          printf("Euro: %.2f",USDtoEURO); // %.2f = rounds the float to only 2 decimal places;
+      }
+      else if(currencyChoice == 2){
+          printf("Please enter the USD amount: \n");
+          scanf("%d",&userinputUSDtoJPY);
+          USDtoJPY = userinputUSDtoJPY * 111.09;
+          printf("JPY: %.2f",USDtoJPY);
+      }
+      else if(currencyChoice == 3) {
+        printf("Please enter the USD amount: \n");
+        scanf("%d",&userinputUSDtoRMB);
+        USDtoRMB = userinputUSDtoRMB * 6.82;
+        printf("RMB: %.2f",USDtoRMB);
+      }
+      else
+       { printf("Please enter correct choice. \n");
+        goto cc;
+        }
+        break;
+ case 3: 
+      mm:
+      printf("Welcome to Mass Converter! \n");
+      printf("Here is a list of conversations to choose from: \n");
+      printf("Enter 1 for ounces to pounds. \n");
+      printf("Enter 2 for gram to pounds. \n");
+      scanf("%d",&massChoice);
+      if(massChoice == 1){
+          printf("Please enter the ounce amount: \n");
+          scanf("%d",&userinputOunce);
+          ounceToPounds = userinputOunce * 0.0625;
+          printf("Pounds: %.2f",ounceToPounds);
+      }
+      else if(massChoice == 2) {
+          printf("Please enter the gram amount: \n");
+          scanf("%d",&userinputGram);
+          gramsToPounds = userinputGram * 0.00220462;
+          printf("Pounds: %.2f",gramsToPounds);
+      }
+      else 
+       { printf("Please enter the correct choice. \n");
+        goto mm;
+        }
+        break;
+default:
+        printf("Please enter the correct choice.\n");
+ } 
+
+
+ printf("\n \n \n **Thank you for using this converter \n Press 1 to go back to do another calculation \n Press 2 to exit converter \n Enter your option :");
+  scanf("%d",&options);
+ 
+  if(options==1)
+  goto menu;
+  else if(options==2)
+  printf("End of conversions");
+  else
+  printf("invalid option");
+ 
+  return 0;
+}
+  
